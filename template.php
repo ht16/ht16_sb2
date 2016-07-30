@@ -12,7 +12,7 @@ function get_full_path_to_theme() {
  *
  * @ingroup themeable
  */
-function wilderness_menu_local_task($link, $active = FALSE) {
+function ht16_sb2_menu_local_task($link, $active = FALSE) {
   $output = preg_replace('~<a href="([^"]*)"[^>]*>([^<]*)</a>~',
   '<a href="$1" class="Button">'
   .'<span class="btn">'
@@ -29,7 +29,7 @@ function wilderness_menu_local_task($link, $active = FALSE) {
  *
  * @ingroup themeable
  */
-function wilderness_menu_local_tasks() {
+function ht16_sb2_menu_local_tasks() {
   $output = '';
 
   if ($primary = menu_primary_local_tasks()) {
@@ -137,7 +137,7 @@ function ht16_sb2_img_assist_page($content, $attributes = NULL) {
   return $output;
 }
 
-//* Funktion zur Darstellung des Namens statt des Login in Beiträgen *//
+//* Funktion zur Darstellung des Namens statt des Login in Beitrï¿½gen *//
 
 function phptemplate_username($object) {
 
@@ -279,8 +279,8 @@ function ht16_sb2_preprocess_page(&$vars, $hook) {
 	if ($node->type == 'sports') {
      	$termname="";
 		foreach ($node->taxonomy as $term) {
-			if ($termname=="") $termname=$term->name; 
-		}	
+			if ($termname=="") $termname=$term->name;
+		}
 		$vars['embedded_view'] = views_embed_view('rotierende__bilder', 'block_2', $termname);
 		$vars['scripts'] = drupal_get_js();
 		$vars['styles'] = drupal_get_css();
@@ -295,5 +295,5 @@ function ht16_sb2_preprocess_page(&$vars, $hook) {
 		$vars['scripts'] = drupal_get_js();
 		$vars['styles'] = drupal_get_css();
 	}
-	
+
 }

@@ -1,8 +1,9 @@
 ; $Id: ht16_sb2.info,v 0.7 2011/05/17 23:40:00 $
-name = HT16 SB2 
+name = HT16 SB2
 description = Tableless, multi-column, fixed width theme
 screenshot = screenshot.png
 core = 6.x
+version = 6.x-1.0
 engine = phptemplate
 regions[topright] = Right Header
 regions[left] = First sidebar
@@ -20,4 +21,3 @@ features[] = slogan
 features[] = mission
 features[] = comment_user_picture
 features[] = favicon
-
