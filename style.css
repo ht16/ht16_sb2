@@ -1,0 +1,1815 @@
+/* $Id: style.css $ */
+
+/* begin Page */
+
+body
+{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "Futura", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.Main
+{
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.PageBackgroundGlare
+{
+	position: absolute;
+	width: 100%;
+	height: 343px;
+	left: 0;
+	top: 0;
+}
+
+.PageBackgroundGlareImage
+{
+	background-image: url('images/Page-BgGlare.png');
+	background-repeat: no-repeat;
+	height: 343px;
+	width: 353px;
+	margin: 0;
+}
+
+html:first-child .PageBackgroundGlare
+{
+	border: 1px solid transparent; /* Opera fix */
+}
+
+.PageBackgroundSimpleGradient
+{
+	position: absolute;
+	background-image: url('images/Page-BgSimpleGradient.jpg');
+	background-repeat: repeat-x;
+	top:0;
+	width: 100%;
+	height: 250px;
+}
+
+.cleared
+{
+	float: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size:1px;
+}
+
+form
+{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+table.position
+{
+	position: relative;
+	width: 100%;
+	table-layout: fixed;
+}
+/* end Page */
+
+
+/* begin Box, Sheet */
+.Sheet
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	width: 960px;
+	min-width:23px;
+	min-height:23px;
+}
+
+.Sheet-body
+{
+	position: relative;
+	z-index:1;
+	padding: 15px;
+}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl, .Sheet-tc, .Sheet-bc,.Sheet-cr, .Sheet-cl
+{
+	position:absolute;
+	z-index:-1;
+}
+
+.Sheet-tr, .Sheet-tl, .Sheet-br, .Sheet-bl
+{
+	width: 42px;
+	height: 42px;
+	background-image: url('images/Sheet-s.png');
+}
+
+.Sheet-tl
+{
+	top:0;
+	left:0;
+	clip: rect(auto, 21px, 21px, auto);
+}
+
+.Sheet-tr
+{
+	top: 0;
+	right: 0;
+	clip: rect(auto, auto, 21px, 21px);
+}
+
+.Sheet-bl
+{
+	bottom: 0;
+	left: 0;
+	clip: rect(21px, 21px, auto, auto);
+}
+
+.Sheet-br
+{
+	bottom: 0;
+	right: 0;
+	clip: rect(21px, auto, auto, 21px);
+}
+
+.Sheet-tc, .Sheet-bc
+{
+	left: 21px;
+	right: 21px;
+	height: 42px;
+	background-image: url('images/Sheet-h.png');
+}
+
+.Sheet-tc
+{
+	top: 0;
+	clip: rect(auto, auto, 21px, auto);
+}
+
+.Sheet-bc
+{
+	bottom: 0;
+	clip: rect(21px, auto, auto, auto);
+}
+
+.Sheet-cr, .Sheet-cl
+{
+	top: 21px;
+	bottom: 21px;
+	width: 42px;
+	background-image: url('images/Sheet-v.png');
+}
+
+.Sheet-cr
+{
+	right:0;
+	clip: rect(auto, auto, auto, 21px);
+}
+
+.Sheet-cl
+{
+	left:0;
+	clip: rect(auto, 21px, auto, auto);
+}
+
+.Sheet-cc
+{
+	position:absolute;
+	z-index:-1;
+	top: 21px;
+	left: 21px;
+	right: 21px;
+	bottom: 21px;
+	background-color: #FDFDFC;
+}
+
+.Sheet
+{
+	margin-top: -15px !important;
+}
+
+.PageBackgroundSimpleGradient, .PageBackgroundGradient, .PageBackgroundGlare
+{
+	min-width:900px;
+}
+
+/* end Box, Sheet */
+
+/* begin Header */
+div.Header
+{
+	margin: 0 auto;
+	position: relative;
+	z-index:0;
+	height: 140px;
+}
+/* end Header */
+
+/* begin Logo */
+.logo
+{
+	display : block;
+	position: absolute;
+	left: 10px;
+	top: 3px;
+	width: 850px;
+}
+/* end Logo */
+
+/* begin Slogan */
+.slogan
+{
+	font-size:24px;
+	font-style:italic;
+	font-weight:bold;
+	text-align:left;
+	position: absolute;
+	left: 185px;
+	bottom: 6px;
+	color:#999999;
+}
+/* end Slogan */
+
+/* begin Menu */
+/* menu structure */
+
+.artmenu a, .artmenu a:link, .artmenu a:visited, .artmenu a:hover
+{
+	text-align:left;
+	text-decoration:none;
+	outline:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+}
+
+.artmenu, .artmenu ul
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.artmenu li
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 5;
+	background:none;
+}
+
+.artmenu li:hover
+{
+	z-index: 10000;
+	white-space: normal;
+}
+
+.artmenu li li
+{
+	float: none;
+}
+
+.artmenu ul
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	background:none;
+}
+
+.artmenu li:hover>ul
+{
+	visibility: visible;
+	top: 100%;
+}
+
+.artmenu li li:hover>ul
+{
+	top: 0;
+	left: 100%;
+}
+
+.artmenu:after, .artmenu ul:after
+{
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.artmenu, .artmenu ul
+{
+	min-height: 0;
+}
+
+.artmenu ul
+{
+	background-image: url(images/spacer.gif);
+	padding: 10px 30px 30px 30px;
+	margin: -10px 0 0 -30px;
+}
+
+.artmenu ul ul
+{
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+}
+
+
+
+
+/* menu structure */
+
+.artmenu
+{
+	padding: 6px 6px 6px 6px;
+}
+
+.nav
+{
+	position: relative;
+	height: 43px;
+	z-index: 100;
+}
+
+.nav .l, .nav .r
+{
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	height: 43px;
+	background-image: url('images/nav.png');
+}
+
+.nav .l
+{
+	left: 0;
+	right:0px;
+}
+
+.nav .r
+{
+	right: 0;
+	width: 870px;
+	clip: rect(auto, auto, auto, 870px);
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+.artmenu ul li
+{
+	clear: both;
+}
+
+.artmenu a
+{
+	position:relative;
+	display: block;
+	overflow:hidden;
+	height: 31px;
+	cursor: pointer;
+	font-weight:bold;
+	text-decoration: none;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+.artmenu a .r, .artmenu a .l
+{
+	position:absolute;
+	display: block;
+	height: 93px;
+	background-image: url('images/MenuItem.png');
+}
+
+.artmenu a .l
+{
+	left:0;
+	right:4px;
+}
+
+.artmenu a .r
+{
+	width:408px;
+	right:0;
+	clip: rect(auto, auto, auto, 404px);
+}
+
+.artmenu a .t
+{
+	font-size: 15px;
+	color: #f7f7f7;
+	padding: 0 19px;
+	margin: 0 4px;
+	line-height: 31px;
+	text-align: center;
+}
+
+.artmenu a:hover .l, .artmenu a:hover .r
+{
+	top:-31px;
+}
+
+.artmenu li:hover>a .l, .artmenu li:hover>a .r
+{
+	top:-31px;
+}
+
+.artmenu li:hover a .l, .artmenu li:hover a .r
+{
+	top:-31px;
+}
+.artmenu a:hover .t
+{
+	color: #F4F5EF;
+}
+
+.artmenu li:hover a .t
+{
+	color: #3c3c3c;
+}
+
+.artmenu li:hover>a .t
+{
+	color: #F4F5EF;
+}
+
+.artmenu a.active .l, .artmenu a.active .r
+{
+	top: -62px;
+}
+
+.artmenu a.active .t
+{
+	color: #F4F5EF;
+}
+
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+.nav .separator
+{
+	display: block;
+	width: 1px;
+	height: 31px;
+	background-image: url('images/MenuSeparator.png');
+}
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.artmenu ul a
+{
+	display:block;
+	text-align: center;
+	white-space: nowrap;
+	height: 20px;
+	width: 180px;
+	overflow:hidden;
+	line-height: 20px;
+	margin-right: auto;
+	background-image: url('images/subitem-bg.png');
+	background-position: left top;
+	background-repeat: repeat-x;
+	border-width: 0px;
+	border-style: solid;
+}
+
+.nav ul.artmenu ul span, .nav ul.artmenu ul span span
+{
+	display: inline;
+	float: none;
+	margin: inherit;
+	padding: inherit;
+	background-image: none;
+	text-align: inherit;
+	text-decoration: inherit;
+}
+
+.artmenu ul a, .artmenu ul a:link, .artmenu ul a:visited, .artmenu ul a:hover, .artmenu ul a:active, .nav ul.artmenu ul span, .nav ul.artmenu ul span span
+{
+	text-align: left;
+	text-indent: 12px;
+	text-decoration: none;
+	line-height: 20px;
+	color: #666666;
+	font-size: 12px;
+}
+
+.artmenu ul ul a
+{
+	margin-left: auto;
+}
+
+.artmenu ul li a:hover
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+.artmenu ul li:hover>a
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+.nav .artmenu ul li a:hover span, .nav .artmenu ul li a:hover span span
+{
+	color: #000000;
+}
+
+.nav .artmenu ul li:hover>a span, .nav .artmenu ul li:hover>a span span
+{
+	color: #000000;
+}
+
+.artmenu ul li a:active
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+.artmenu ul li:active>a
+{
+	color: #000000;
+	background-position: 0 -20px;
+}
+
+/* end MenuSubItem */
+
+/* Begin Menu 2nd level */
+#subnav {
+  height: 3em;
+  border-bottom: 2px solid;
+  border-color: #A10F15;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+
+.level2-links {
+  font-weight: bold;
+  height: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+.level2-links .Block-body,
+.level2-links .BlockContent,
+.level2-links .BlockContent-body {
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.level2-links li {
+  display: inline;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.level2-links li.last {
+   border-right: none;
+}
+
+.level2-links li a {
+  display: block;
+  line-height: 2.5em;
+  padding: 0 1em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.level2-links li a:hover,
+.level2-links li a:focus {
+  text-decoration: none;
+  background-color: #A10F15;
+  color: #fff;
+  border-bottom: none;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+}
+
+/* Margin Reset
+   The last column in a row needs this class
+   to prevent it wrapping below the others  */
+div.last    { margin-right: 0; }
+
+/* Float reset
+   Useful for divs that span the entire width.
+   - reset the float to none
+   - clear all floats
+   - reset margin-right  */
+div.nofloat { float: none; clear: both; margin-right: 0; }
+
+
+/* end Menu 2nd level */
+
+/* User Menus System */
+
+a:link {
+	text-decoration:none;}
+
+a:visited {
+	text-decoration:none;}
+a:hover {
+	text-decoration:none;
+	border-bottom: 1px dotted #a10f15;
+	color: #a10f15;}
+
+/* End User Menus System */
+
+/* begin Box, Block */
+.Block
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:15px;
+	min-height:15px;
+}
+
+.Block-body
+{
+	position: relative;
+	z-index:1;
+	padding: 7px;
+}
+
+.Block-tr, .Block-tl, .Block-br, .Block-bl, .Block-tc, .Block-bc,.Block-cr, .Block-cl
+{
+	position:absolute;
+	z-index:-1;
+}
+
+
+.Block
+{
+	margin: 7px;
+}
+
+
+/* end Box, Block */
+
+
+/* begin BlockHeader */
+.BlockHeader
+{
+	position:relative;
+	z-index:0;
+	height: 30px;
+	padding: 0 7px;
+	margin-bottom: 7px;
+}
+
+.BlockHeader .t
+{
+	height: 30px;
+	color: #f7f7f7;
+	font-size: 14px;
+	font-weight: bold;
+	white-space : nowrap;
+	line-height: 30px;
+}
+
+.BlockHeader .l, .BlockHeader .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 30px;
+	background-image: url('images/BlockHeader.png');
+}
+
+.BlockHeader .l
+{
+	left:0;
+	right:6px;
+}
+
+.BlockHeader .r
+{
+	width:890px;
+	right:0;
+	clip: rect(auto, auto, auto, 884px);
+}
+
+
+
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.BlockContent
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.BlockContent-body
+{
+	position: relative;
+	z-index:1;
+	padding: 8px;
+}
+
+.BlockContent-body
+{
+	color:#000000;
+	font-size: 12px;
+}
+
+.BlockContent-body ul
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+.BlockContent-body li
+{
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.BlockContent-body ul li
+{
+	padding:0px 0 0px 15px;
+	margin:0.5em 0 0.5em 0;
+	line-height:1.2em;
+	list-style-type: none;
+}
+
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.Post
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.Post-body
+{
+	position: relative;
+	z-index:1;
+	padding: 10px;
+}
+
+.Post
+{
+	margin: 10px;
+}
+
+/* Start images */
+a img
+{
+	border: 0;
+}
+
+.article img, img.article
+{
+	margin: 1em;
+}
+/* Finish images */
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.PostHeaderIcon-wrapper
+{
+	text-decoration:none;
+	margin: 0.2em 0;
+	padding: 0;
+	font-weight:normal;
+	font-style:normal;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-variant:normal;
+	text-decoration:none;
+	font-variant:normal;
+	text-transform:none;
+	text-align:left;
+	text-indent:0;
+	line-height:inherit;
+	font-size: 24px;
+	color: #3c3c3c;
+}
+
+.PostHeaderIcon-wrapper, .PostHeaderIcon-wrapper a, .PostHeaderIcon-wrapper a:link, .PostHeaderIcon-wrapper a:visited, .PostHeaderIcon-wrapper a:hover
+{
+	font-size: 20px;
+	color: #3c3c3c;
+}
+
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+.PostHeader a:hover, .PostHeader a.hovered
+{
+  text-decoration: none;
+  text-align: left;
+  color: #640b0f;
+}
+/* end PostHeader */
+
+/* begin PostMetadata */
+.PostMetadataHeader
+{
+	padding:1px;
+	background-color: #f7f7f7;
+	border-color: #a10f15;
+	border-style: solid;
+	border-width: 1px;
+}
+/* end PostMetadata */
+
+/* begin PostIcons */
+.PostHeaderIcons
+{
+	padding:1px;
+}
+
+.PostHeaderIcons a, .PostHeaderIcons a:link, .PostHeaderIcons a:visited, .PostHeaderIcons a:hover
+{
+	margin:0;
+}
+
+.PostHeaderIcons a:hover, .PostHeaderIcons a.hover
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+/* end PostIcons */
+
+/* begin PostContent */
+/* Start Content link style */
+/*
+The right order of link pseudo-classes: Link-Visited-Hover-Focus-Active.
+http://www.w3schools.com/CSS/css_pseudo_classes.asp
+http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states/
+*/
+a
+{
+  color: #640b0f;
+
+}
+
+/* :hover - adds special style to an element when you mouse over it. */
+a:hover, a.hover
+{
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+/* Finish Content link style */
+
+/* Resert some headings default style & links default style for links in headings*/
+/* end PostContent */
+
+/* begin PostBullets */
+/* Start Content list */
+ol, ul
+{
+	margin:1em 0 1em 2em;
+	padding:0;
+	font-size: 1em;
+}
+
+li ol, li ul
+{
+	margin:0.5em 0 0.5em 2em;
+	padding:0;
+}
+
+li
+{
+	margin:0.2em 0;
+	padding:0;
+}
+
+ol
+{
+	list-style-position:inside;
+}
+
+.Post ol li, .Post ul ol li
+{
+	background: none;
+	padding-left:0;
+}
+
+.Post ul li, .Post ol ul li
+{
+	background-repeat:no-repeat;
+}
+
+
+/* Finish Content list */
+/* end PostBullets */
+
+/* begin PostQuote */
+/* Start blockquote */
+blockquote p
+{
+	color:#0E1608;
+}
+
+blockquote
+{
+	margin:10px 10px 10px 50px;
+	padding:5px 5px 5px 41px;
+	background-image:url('images/PostQuote.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+
+
+/* Finish blockuote */
+/* end PostQuote */
+
+/* begin PostMetadata */
+.PostMetadataFooter
+{
+	padding:1px;
+	background-color: #f7f7f7;
+	border-color: #a10f15;
+	border-style: solid;
+	border-width: 1px;
+}
+/* end PostMetadata */
+
+/* begin PostIcons */
+.PostFooterIcons
+{
+	padding:1px;
+}
+
+.PostFooterIcons a, .PostFooterIcons a:link, .PostFooterIcons a:visited, .PostFooterIcons a:hover
+{
+	margin:0;
+}
+/* end PostIcons */
+
+/* begin Button */
+a.Button, button.Button
+{
+	display:inline-block;
+	width: auto;
+	outline:none;
+	border:none;
+	background:none;
+	line-height:33px;
+	margin:0;
+	padding:0;
+	overflow: visible;
+	cursor: default;
+	text-decoration: none !important;
+	z-index:0;
+}
+
+a.Button .btn, button.Button .btn
+{
+	display:block;
+	position:relative;
+	float:left;
+	height: 33px;
+	overflow:hidden;
+	white-space: nowrap;
+	width: auto;
+	color: #f7f7f7;
+}
+
+a.Button .btn .t, button.Button .btn .t
+{
+	display:block;
+	height: 33px;
+	font-size: 12px;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 16px;
+	line-height: 33px;
+	text-decoration: none !important;
+}
+
+a.Button .hover, a.Button:hover, button.Button .hover, button.Button:hover
+{
+	color: #F1F8EC;
+	text-decoration: none !important;
+}
+
+a.Button .active, button.Button .active
+{
+	color: #F4F5EF;
+}
+
+a.Button .btn .l, a.Button .btn .r, button.Button .btn .l, button.Button .btn .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 99px;
+	background-image: url('images/Button.png');
+}
+
+a.Button .btn .l, button.Button .btn .l
+{
+	left:0;
+	right:10px;
+}
+
+a.Button .btn .r, button.Button .btn .r
+{
+	width:409px;
+	right:0;
+	clip: rect(auto, auto, auto, 399px);
+}
+
+a.Button .btn.hover .l, a.Button .btn.hover .r, a.Button .btn:hover .l, a.Button .btn:hover .r, button.Button .btn.hover .l, button.Button .btn.hover .r, button.Button .btn:hover .l, button.Button .btn:hover .r
+{
+	top: -33px;
+}
+
+a.Button .btn.active .l, a.Button .btn.active .r, button.Button .btn.active .l, button.Button .btn.active .r
+{
+	top: -66px;
+}
+
+
+/* end Button */
+
+/* begin Footer */
+.Footer
+{
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+	width: 100%;
+	margin: 5px auto 0px auto;
+}
+
+.Footer .Footer-inner
+{
+	height:1%;
+	position: relative;
+	z-index: 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.Footer .Footer-background
+{
+	position:absolute;
+	z-index:-1;
+	background-image: url('images/Footer.png');
+	width: 100%;
+	height: 150px;
+	bottom:0;
+	left:0;
+}
+
+/* veraltet, auskommentiert
+//.rss-tag-icon_alt
+//{
+	//position: relative;
+	//display:block;
+	//float:left;
+	//background-image: url('images/rssIcon.png');
+	//background-position: center right;
+	//background-repeat: no-repeat;
+	//margin: 0 5px 0 0;
+	//height: 30px;
+	//width: 30px;
+//}
+*/
+
+.Footer .Footer-text p
+{
+	margin: 0;
+}
+
+.Footer .Footer-text
+{
+	color:#1B1C12;
+	margin:0 auto;
+	width: 82%;
+}
+
+/* end Footer */
+
+/* begin PageFooter */
+.page-footer, .page-footer a, .page-footer a:link, .page-footer a:visited, .page-footer a:hover
+{
+	font-family:Arial;
+	font-size:10px;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	color: #F4F5EF;
+}
+
+.page-footer
+{
+	margin:1em;
+	text-align:center;
+	text-decoration:none;
+	color: #f7f7f7;
+}
+/* end PageFooter */
+
+/*
+** HTML elements
+*/
+#footer
+{
+	text-align: center;
+}
+
+ul li
+{
+	text-align: left;
+	background-image: none;
+}
+
+li.expanded, li.leaf, li.collapsed
+{
+	list-style-type: none;
+	list-style-image: none;
+	background-image: none;
+}
+
+.tabs, .links, .service-links img, service-links img
+{
+	padding-left: 0px;
+	margin: 0px;
+}
+
+.tabs li, .links li
+{
+	display: block;
+	padding: 0 0 0 1em;
+}
+
+#user-login-form
+{
+	text-align: left;
+}
+
+#user-login-form ul li
+{
+	background-image: none;
+	padding-left:0;
+}
+
+fieldset
+{
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid ;
+	width: 95%;
+}
+
+fieldset legend
+{
+	/* Fix disappearing legend in FFox */
+	display: block;
+}
+
+.breadcrumb
+{
+	display: block;
+	padding-bottom: .7em;
+}
+
+.form-text, .form-textarea
+{
+	width: 95%;
+	text-align: left;
+}
+
+.tags
+{
+	float: left;
+}
+
+.messages
+{
+	padding: 5px;
+	margin: 5px 0;
+}
+
+.status
+{
+	border: 1px solid #090;
+	background:#999999;
+	margin: 5px 0;
+}
+
+.messages li
+{
+	margin: 5px 0;
+}
+
+tr.even, tr.odd
+{
+	background-color: transparent;
+}
+
+.read_more
+{
+	margin: 5px 0px;
+	text-align:left;
+}
+
+.sticky-table H2
+{
+	font-size: 10px;
+}
+
+.Footer .Footer-inner
+{
+	float: left;
+	width: 100%;
+}
+
+ul.primary {
+	border-bottom: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0px;
+	line-height: 130%;
+	margin-bottom: 8px;
+	margin-top: 5px;
+}
+
+h1 {
+	font-size:1.4em;
+	color:#333333;
+	text-align:center;
+}
+
+h2 {
+	font-size: 1.2em;
+	color:#333333;
+	margin-top: 1.2em;
+}
+
+h3 {
+	font-size: 1.1em;
+	font-weight:bold;
+	margin-top: 1.1em
+}
+
+h4 {
+	font-size: 1.0em;
+	font-weight:bold;
+	font-style:italic;
+}
+
+p {
+	font-size:1.0em;
+}
+
+p.absatzabstand_klein {
+	font-size:1.0em;
+    margin-top: 0.5em;
+	margin-bottom: 0.75em;
+}
+
+.node {
+	margin: 0 0 30px;
+	padding: 0 10px;
+}
+
+div.comment {
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	padding: 8px;
+}
+
+div.comment div.picture {
+	float: right;
+	margin: 5px;
+}
+
+div.node div.picture {
+	float: right;
+	margin: 5px;
+}
+
+.metadata {
+	font-size: smaller;
+	clear: both;
+	margin: 2px 0 0 0;
+	padding: 5px 0 0 0;
+	line-height: 16px;
+}
+
+.chronodata {
+	padding: 2px 0 2px 20px;
+	background: url(images/PostDateIcon.png) left center no-repeat;
+}
+
+.new {
+	color: #f00;
+	float: right;
+}
+
+.submitted {
+	font-size:0.75em;
+	color: #999999;
+	margin-bottom: 1.5em;
+}
+
+.floatleft {
+  float:left;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+div.meta div.links ul.links a {
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	background-position: 0 50%;
+}
+
+div.meta div.links ul.links li.comment_add a {
+	background-image: url(images/mini-comment.png);
+}
+
+div.meta div.links ul.links li.comment_comments a {
+	background-image: url(images/mini-comment.png);
+}
+
+div.meta div.links ul.links li.comment_edit a {
+	background-image: url(images/mini-edit.png);
+}
+
+div.meta div.links ul.links li.comment_delete a {
+	background-image: url(images/mini-trash.png);
+}
+
+div.meta div.links ul.links li.comment_reply a {
+	background-image: url(images/mini-comment.png);
+}
+
+div.meta div.links ul.links li.blog_usernames_blog a {
+	background-image: url(images/user-plain-green.png);
+}
+
+div.meta div.links ul.links li.upload_attachments a {
+	background-image: url(images/photo.png);
+}
+
+div.meta div.links ul.links li.node_read_more a {
+	background-image: url(images/arrow-single-right-red.png);
+}
+
+div.meta div.links ul.links li.book_add_child a {
+	background-image: url(images/doc-option-add.png);
+}
+
+div.meta div.links ul.links li.book_printer a {
+	background-image: url(images/printer.png);
+}
+
+div.meta div.links ul.links li.comment_forbidden a {
+	padding-left: 0px;
+}
+
+#main {
+	width: 100%;
+	float: left;
+	display: inline;
+}
+
+.one-sidebar #main {
+	width: 75%;
+}
+
+.sidebar {
+	width: 25%;
+	float: left;
+	display: inline;
+}
+
+#search-box {
+	float: right;
+	position: relative;
+	top: 70px;
+}
+
+#search-box input#edit-search-theme-form-1 {
+	width: 170px;
+}
+
+#search-box label {
+	display: none;
+}
+
+#search.container-inline div, #search.container-inline button {
+	vertical-align: middle;
+}
+
+#topright {
+	z-index:1;
+	margin:-7px;
+	position: absolute;
+	top: 0px;
+	right: 95px;
+}
+
+#featured {
+	position: relative;
+	height: 94px;
+	background: url(images/bildlauf.png) no-repeat center;
+}
+
+.featured_unique {
+		position: relative;
+		height: 94px;
+}
+
+.terms {
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	background-image: url(images/folder-open-red.png);
+	padding-bottom: 5px;
+}
+
+div.messages {
+	background-color: #fff;
+	border: 1px solid #b8d3e5;
+	padding: .75em 1.25em;
+	margin: 1em 0;
+}
+
+.preview {
+	background-color: #fcfce8;
+	border: 1px solid #999999;
+	padding: .25em 1.25em;
+	margin: 1em 0;
+}
+
+div.status {
+	color: #65743d;
+	border-color: #d6dfb9;
+	background-color: #edf5d7;
+}
+
+div.error {
+	color: #ba1212;
+	border-color: #edc8c8;
+	background-color: #f8e7e7;
+}
+
+.item-list ul.pager {
+	margin: 0px;
+	padding-top: 10px;
+}
+
+.item-list .pager li {
+	margin: 0px;
+	padding: 3px;
+}
+
+.item-list .pager li.pager-current {
+	padding: 4px;
+}
+
+.preview .node, .preview .comment, .sticky {
+	margin: 0;
+	padding: 0.5em 0;
+	border: 0;
+	background: 0;
+}
+
+.sticky {
+	padding: 1em;
+	margin-bottom: 2em;
+}
+
+/* Begin Modul "Block Class" css */
+.footerblockmenu ul, .footerblockmenu li, .footerblockmenu a, .footerblockmenu a:link, .footerblockmenu a:visited, .footerblockmenu a:hover {
+	display:inline;
+	margin:0px 20px 0px 20px;
+	list-style:none;
+	font-size:15px;
+	background-image:url('images/spacer.gif');
+	background-repeat:no-repeat;
+	color:#ffffff;
+}
+
+.blockbullet ol, .blockbullet ul, .blockbullet li {
+	background-image: url('images/BlockContentBullets.png');
+	background-repeat: no-repeat;
+	color: #000000;
+	text-decoration: none;
+	font-size:12px;
+}
+
+.blocklinks a, .blocklinks a:link, .blocklinks a:visited  {
+	color: #000000;
+	text-decoration: none;
+}
+
+.imagelinks a, .imagelinks a:link, .imagelinks a:visited, .imagelinks:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+/* End Modul "Block Class" css */
+
+/* Begin Frontpage Background */
+#frontimage {
+	background-image: url('images/tartan3.gif');
+	background-position: top center;
+	height: 580px;
+	background-repeat: no-repeat;
+}
+
+.frontlinks a, .frontlinks a:link, .frontlinks a:visited, .frontlinks a:hover {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: none;
+	font-size: 15px;
+	top: -31px;
+}
+
+/*add on css to force grid view - can go in theme css*/
+
+.gallery-images-list .item-list ul li {
+  float: left;
+  width: 130px;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  min-height: 160px; /* if you use long titles which will be displayed under pictures some pictures may 'stuck' and not go to left, try lower value and you will see what I mean */
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  list-style-type: none;
+  text-align: center;
+}
+
+.gallery-images-list .item-list ul li .image-title {
+  line-height: normal;
+  margin: 0 auto;
+  width: 120px;
+}
+
+.gallery-images-list .item-list ul li .image-thumbnail-view, .gallery-images-list .item-list ul li .image-thumbnail, .gallery-images-list .item-list ul li .image-thumbnail img {
+  margin: 0 auto;
+  width: 120px;
+}
+
+.archiv-title {
+	padding: 10px 0 0 0;
+	line-height:1.5em;
+	text-align: left;
+	color: #a10f15;
+	font-size: 1.2em;
+}
+
+td.views-field-created {
+	padding-right: 15px;
+	height: 1.4em;
+	background-color: transparent;
+}
+
+.code {
+	background-color:#eeeeff;
+	border-color:#8080ff;
+	border-style:solid;
+	border-width:1px;
+}
+
+/* Hide title on frontpage */
+
+.front #main .title {display: none;}
+
+/*  Override CSS for module itweak_upload
+	(the stylish attachment display)		*/
+
+table.itu-attachment-list td {
+  padding: 0 5px;
+  margin: 0;
+  background: none;
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+table.month-view {
+	width: 675px;
+}
+
+table.views-view-grid  {
+	width:100%;
+}
+
+table.archiv-table {
+	width:100%;
+}
+
+.archiv-title {
+	padding: 10px 0 0 0;
+	line-height:1.2em;
+	text-align: left;
+	color: #a10f15;
+	font-size: 1.0em;
+}
+
+td.views-field-created {
+	padding-right: 15px;
+	height: 1.4em;
+	background-color: transparent;
+}
+
+//* Override templates for relatedcontent module with
+	simplenews *//
+
+.relatedcontent-nodes div {
+	margin-left: 25px;
+	margin-right:25px;
+}
+
+.relatedcontent-nodes h1, h2, h3 {
+	text-align:left;
+	font-size: 14px;
+	font-weight:bold;
+	color:#a10f15;
+}
+
+.relatedcontent-nodes p {
+	font-size: 12px;
+}
+
+.relatedcontent-nodes.field  {
+	font-size:12px;
+}
+
+/* dont show some internal details */
+
+.relatedcontent-nodes li.statistics_counter {
+	display:none;
+}
+
+.relatedcontent-nodes div.submitted {
+	display:none;
+}
+
+.views-field {
+	padding-right: 5px;
+	margin: 2px;
+}
+
+.check {
+	padding: 2px 30px 2px 30px;
+	background: url('images/checkmark1.png') right center no-repeat;
+	width: 80%;
+}
+
+.attention {
+	padding: 2px 30px 2px 30px;
+	background: url('images/stop-cross_24.png') right center no-repeat;
+	width: 80%;
+}
+
+#pagination-toc    {
+    border: 1px solid #CCCCCC;
+    background-color: #EFEFEF;
+    width: 230px;
+    float: right;
+	padding: 10px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+ul.pager {
+	margin-bottom: 5px;
+}
+
+div.sportartfinder-halle {
+	margin-left: 5px;
+}
+
+div.re-li-abstand {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.hervorgehoben {
+	font-weight:bold;
+}
+
+/* div.field-items {
+	margin-top: 24px;
+	padding: 6px;
+	background-color: #f7f7f7;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #999999;
+} */
+
+#autocomplete  {
+	background-color: #ffffff;
+}
+
+#autocomplete-processed {
+	background-color: #ffffff;
+}
+
+.cbox2 {
+	float: left;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	clear: both;
+}
+
+.hinweis {
+	background-color: #FFFBD9;
+	border-color: #FFEB00;
+	border-style: solid;
+	border: 1px;
+	padding: 6px 12px;
+}
+
+.itemsep {
+	margin: 5px;
+	padding: 5px;
+	border-top-width: 1px;
+	border-top-color: #999999;
+	border-top-style: dotted;
+}
+
+.fotogalerie_bildtitel {
+	text-decoration: none;
+	font-weight:bold;
+}
+
+.hilfstext-content {
+	font-size: smaller;
+	background-color: #f4f4f4;
+	color: #333333;
+	margin: -5px;
+	padding: 5px;
+}
+
+/*
+.hilfstext-content h1, h2, h3, h4 {
+	color: #005a8c;
+}
+*/
+
+/* Override default.css & system.css styles */
+
+th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid;
+}
+
+tbody {
+  border-top: 0px;
+}
+tbody th {
+  border-bottom: 1px solid;
+}
+thead th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid;
+}
+
+/* End override */
+
+.ansprechpartner-grid {
+	padding-bottom: 5px;
+}
