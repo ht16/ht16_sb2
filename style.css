@@ -204,7 +204,7 @@ div.Header
 	margin: 0 auto;
 	position: relative;
 	z-index:0;
-	height: 140px;
+	height: 220px;
 }
 /* end Header */
 
@@ -214,7 +214,7 @@ div.Header
 	display : block;
 	position: absolute;
 	left: 10px;
-	top: 3px;
+	top: 10px;
 	width: 850px;
 }
 /* end Logo */
