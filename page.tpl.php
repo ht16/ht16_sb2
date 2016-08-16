@@ -68,7 +68,7 @@
       <?php endif; ?>
 	<?php if ($left): ?>
               <div id="sidebar-left" class="sidebar">
-                <?php echo $left ?>
+                <?php echo $left ?>              
               </div>
             <?php endif; ?>
             <div id="main">
@@ -76,10 +76,20 @@
                 <div class="Post-body">
                   <div class="Post-inner">
                     <div class="PostContent">
-				
-				<div class="featured_unique"> 
+                    <div>
+							<?php
+							
+							if ($node->type == 'sports' || $node->type == 'sports_static_page' || $node->nid==3095) {
+							 print $embedded_view;
+						   } 
+						   if ($node->nid==3111) {
+						     echo "<div style='width: 100%;'><div style='margin 0 auto;'><iframe allowfullscreen='' src='https://www.youtube.com/embed/jIGtWjAnWxs' width='645' frameborder='0' height='383'></iframe></div></div>";
+						   }
+							?>
+							</div>
+				<!--div class="featured_unique"> 
 					<img src="<?php print $base_path . unique_section_header(); ?>" />
-				</div>
+				</div-->
                       <?php if (!empty($banner1)) echo $banner1; ?>
                     
 		      <?php if (!empty($tabs)) echo $tabs . '<div class="cleared"></div>'; ?>
@@ -87,8 +97,8 @@
                       <?php if (!empty($mission)) echo '<div id="mission">' . $mission . '</div>'; ?>
                       <?php if (!empty($help)) echo $help; ?>
                       <?php global $user;
-						if (in_array('Administrator', array_values($user->roles)) && $show_messages && $messages): print $messages; endif;
-						?>
+								if (in_array('Administrator', array_values($user->roles)) && $show_messages && $messages): print $messages; endif;
+					        ?>
                       <?php echo $content; ?>
                       <?php if (!empty($content_bottom)) echo $content_bottom; ?>
                     </div>

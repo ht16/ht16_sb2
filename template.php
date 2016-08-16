@@ -273,3 +273,27 @@ function ht16_sb2_preprocess_node(&$variables) {
     }
   }
 }
+
+function ht16_sb2_preprocess_page(&$vars, $hook) {
+	$node = $vars['node'];
+	if ($node->type == 'sports') {
+     	$termname="";
+		foreach ($node->taxonomy as $term) {
+			if ($termname=="") $termname=$term->name; 
+		}	
+		$vars['embedded_view'] = views_embed_view('rotierende__bilder', 'block_2', $termname);
+		$vars['scripts'] = drupal_get_js();
+		$vars['styles'] = drupal_get_css();
+	}
+	if ($node->type == 'sports_static_page') {
+		$vars['embedded_view'] = views_embed_view('rotierende__bilder', 'block_3');
+		$vars['scripts'] = drupal_get_js();
+		$vars['styles'] = drupal_get_css();
+	}
+	if ($node->nid == 3095) {
+		$vars['embedded_view'] = views_embed_view('rotierende__bilder', 'block_4');
+		$vars['scripts'] = drupal_get_js();
+		$vars['styles'] = drupal_get_css();
+	}
+	
+}
