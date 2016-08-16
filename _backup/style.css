@@ -407,7 +407,7 @@ div.Header
 	clip: rect(auto, auto, auto, 404px);
 }
 
-.artmenu a .t
+.artmenu a .t 
 {
 	font-size: 15px;
 	color: #f7f7f7;
@@ -550,78 +550,6 @@ div.Header
 
 /* end MenuSubItem */
 
-/* Begin Menu 2nd level */
-#subnav {
-  height: 3em;
-  border-bottom: 2px solid;
-  border-color: #A10F15;
-  margin: 0px;
-  padding-bottom: 10px;
-}
-
-
-.level2-links {
-  font-weight: bold;
-  height: 3em;
-  margin: 0;
-  padding: 0;
-}
-
-.level2-links .Block-body,
-.level2-links .BlockContent,
-.level2-links .BlockContent-body {
-  height: 0px;
-  margin: 0;
-  padding: 0;
-}
-
-.level2-links li {
-  display: inline;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.level2-links li.last {
-   border-right: none;
-}
-
-.level2-links li a {
-  display: block;
-  line-height: 2.5em;
-  padding: 0 1em;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.level2-links li a:hover,
-.level2-links li a:focus {
-  text-decoration: none;
-  background-color: #A10F15;
-  color: #fff;
-  border-bottom: none;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
-}
-
-/* Margin Reset
-   The last column in a row needs this class
-   to prevent it wrapping below the others  */
-div.last    { margin-right: 0; }
-
-/* Float reset
-   Useful for divs that span the entire width.
-   - reset the float to none
-   - clear all floats
-   - reset margin-right  */
-div.nofloat { float: none; clear: both; margin-right: 0; }
-
-
-/* end Menu 2nd level */
 
 /* User Menus System */
 
@@ -706,7 +634,7 @@ a:hover {
 }
 
 .BlockHeader .r
-{
+{ 
 	width:890px;
 	right:0;
 	clip: rect(auto, auto, auto, 884px);
@@ -875,7 +803,7 @@ http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states/
 a
 {
   color: #640b0f;
-
+  
 }
 
 /* :hover - adds special style to an element when you mouse over it. */
@@ -905,7 +833,7 @@ li ol, li ul
 	padding:0;
 }
 
-li
+li 
 {
 	margin:0.2em 0;
 	padding:0;
@@ -922,7 +850,7 @@ ol
 	padding-left:0;
 }
 
-.Post ul li, .Post ol ul li
+.Post ul li, .Post ol ul li 
 {
 	background-repeat:no-repeat;
 }
@@ -1150,7 +1078,7 @@ a.Button .btn.active .l, a.Button .btn.active .r, button.Button .btn.active .l, 
 	text-align: center;
 }
 
-ul li
+ul li 
 {
 	text-align: left;
 	background-image: none;
@@ -1175,7 +1103,7 @@ li.expanded, li.leaf, li.collapsed
 	padding: 0 0 0 1em;
 }
 
-#user-login-form
+#user-login-form 
 {
 	text-align: left;
 }
@@ -1194,15 +1122,15 @@ fieldset
 	width: 95%;
 }
 
-fieldset legend
+fieldset legend 
 {
 	/* Fix disappearing legend in FFox */
 	display: block;
 }
 
-.breadcrumb
+.breadcrumb 
 {
-	display: block;
+	display: block; 
 	padding-bottom: .7em;
 }
 
@@ -1347,13 +1275,6 @@ div.node div.picture {
 	margin-bottom: 1.5em;
 }
 
-.floatleft {
-  float:left;
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
 div.meta div.links ul.links a {
 	background-repeat: no-repeat;
 	padding-left: 18px;
@@ -1441,6 +1362,8 @@ div.meta div.links ul.links li.comment_forbidden a {
 #topright {
 	z-index:1;
 	margin:-7px;
+	background-color:none;
+	background-image:none;
 	position: absolute;
 	top: 0px;
 	right: 95px;
@@ -1456,7 +1379,7 @@ div.meta div.links ul.links li.comment_forbidden a {
 		position: relative;
 		height: 94px;
 }
-
+	
 .terms {
 	background-repeat: no-repeat;
 	padding-left: 18px;
@@ -1548,7 +1471,7 @@ div.error {
 /* End Modul "Block Class" css */
 
 /* Begin Frontpage Background */
-#frontimage {
+#frontimage { 
 	background-image: url('images/tartan3.gif');
 	background-position: top center;
 	height: 580px;
@@ -1689,13 +1612,13 @@ td.views-field-created {
 .check {
 	padding: 2px 30px 2px 30px;
 	background: url('images/checkmark1.png') right center no-repeat;
-	width: 80%;
+	width: 80%;	
 }
 
 .attention {
 	padding: 2px 30px 2px 30px;
 	background: url('images/stop-cross_24.png') right center no-repeat;
-	width: 80%;
+	width: 80%;	
 }
 
 #pagination-toc    {
@@ -1778,34 +1701,8 @@ div.re-li-abstand {
 	padding: 5px;
 }
 
-/*
+/* 
 .hilfstext-content h1, h2, h3, h4 {
 	color: #005a8c;
 }
 */
-
-/* Override default.css & system.css styles */
-
-th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
-  border-bottom: 3px solid;
-}
-
-tbody {
-  border-top: 0px;
-}
-tbody th {
-  border-bottom: 1px solid;
-}
-thead th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
-  border-bottom: 3px solid;
-}
-
-/* End override */
-
-.ansprechpartner-grid {
-	padding-bottom: 5px;
-}

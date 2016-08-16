@@ -550,78 +550,6 @@ div.Header
 
 /* end MenuSubItem */
 
-/* Begin Menu 2nd level */
-#subnav {
-  height: 3em;
-  border-bottom: 2px solid;
-  border-color: #A10F15;
-  margin: 0px;
-  padding-bottom: 10px;
-}
-
-
-.level2-links {
-  font-weight: bold;
-  height: 3em;
-  margin: 0;
-  padding: 0;
-}
-
-.level2-links .Block-body,
-.level2-links .BlockContent,
-.level2-links .BlockContent-body {
-  height: 0px;
-  margin: 0;
-  padding: 0;
-}
-
-.level2-links li {
-  display: inline;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-.level2-links li.last {
-   border-right: none;
-}
-
-.level2-links li a {
-  display: block;
-  line-height: 2.5em;
-  padding: 0 1em;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.level2-links li a:hover,
-.level2-links li a:focus {
-  text-decoration: none;
-  background-color: #A10F15;
-  color: #fff;
-  border-bottom: none;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
-}
-
-/* Margin Reset
-   The last column in a row needs this class
-   to prevent it wrapping below the others  */
-div.last    { margin-right: 0; }
-
-/* Float reset
-   Useful for divs that span the entire width.
-   - reset the float to none
-   - clear all floats
-   - reset margin-right  */
-div.nofloat { float: none; clear: both; margin-right: 0; }
-
-
-/* end Menu 2nd level */
 
 /* User Menus System */
 
@@ -1441,6 +1369,8 @@ div.meta div.links ul.links li.comment_forbidden a {
 #topright {
 	z-index:1;
 	margin:-7px;
+	background-color:none;
+	background-image:none;
 	position: absolute;
 	top: 0px;
 	right: 95px;
@@ -1784,28 +1714,18 @@ div.re-li-abstand {
 }
 */
 
-/* Override default.css & system.css styles */
+/* Override modules/system/default.css */
+
+table {
+    border-collapse: collapse;
+}
 
 th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
-  border-bottom: 3px solid;
+    border-bottom-color: #000;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    padding-right: 1em;
+    text-align: left;
 }
 
-tbody {
-  border-top: 0px;
-}
-tbody th {
-  border-bottom: 1px solid;
-}
-thead th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
-  border-bottom: 3px solid;
-}
-
-/* End override */
-
-.ansprechpartner-grid {
-	padding-bottom: 5px;
-}
+/* End Override */

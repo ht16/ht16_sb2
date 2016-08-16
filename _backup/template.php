@@ -46,7 +46,7 @@ function wilderness_menu_local_tasks() {
  *
  * @ingroup themeable
  */
-function ht16_sb2_button($element) {
+function wilderness_button($element) {
   // Make sure not to overwrite classes.
   if (isset($element['#attributes']['class'])) {
     $element['#attributes']['class'] = 'Button form-' . $element['#button_type'] . ' ' . $element['#attributes']['class'];
@@ -73,7 +73,7 @@ function ht16_sb2_button($element) {
  * Image assist module support.
  * Using Artisteer styles in IE
 */
-function ht16_sb2_img_assist_page($content, $attributes = NULL) {
+function wilderness_img_assist_page($content, $attributes = NULL) {
   $title = drupal_get_title();
   $output = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'."\n";
   $output .= '<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">'."\n";
@@ -96,7 +96,7 @@ function ht16_sb2_img_assist_page($content, $attributes = NULL) {
   // However, on my site I turned off the text link since I use TinyMCE. I think
   // it would confuse users to have an Add Images link AND a button on the
   // TinyMCE toolbar.
-  //
+  // 
   // Note that in both cases the img_assist.css file is loaded last. This
   // provides a way to make style changes to img_assist independently of how it
   // was loaded.
@@ -140,7 +140,7 @@ function ht16_sb2_img_assist_page($content, $attributes = NULL) {
 //* Funktion zur Darstellung des Namens statt des Login in Beiträgen *//
 
 function phptemplate_username($object) {
-
+ 
   if ($object->uid && $object->name) {
     // Shorten the name when it is too long or it will break many tables.
     if (drupal_strlen($object->name) > 20) {
@@ -158,7 +158,7 @@ function phptemplate_username($object) {
         $name = $profile->profile_firstname." ".$profile->profile_name;
       }
     }
-
+ 
     if (user_access('access user profiles')) {
       $output = l($name, 'user/'. $object->uid, array('title' => t('View user profile.')));
     }
@@ -177,15 +177,15 @@ function phptemplate_username($object) {
     else {
       $output = check_plain($object->name);
     }
-
+ 
     $output .= ' ('. t('not verified') .')';
   }
   else {
     $output = variable_get('anonymous', t('Anonymous'));
   }
-
+ 
   return $output;
-}
+} 
 
 /**
  * Format the "Submitted by username on date/time" for each node
@@ -210,20 +210,20 @@ function unique_section_header() {
   if (!($section == "sportzeiten")) {
     list($sections, ) = explode('/', $path, 3);
 	$section2 = safe_string($sections);
-	$filepath = path_to_theme() . '/images/sections/bildlauf_' . $section2 .'.jpg';
+	$filepath = path_to_theme() . '/images/sections/bildlauf_' . $section2 .'.png';
 	}
   else {
-  $filepath = path_to_theme() . '/images/sections/bildlauf_' . $section .'.jpg';
+  $filepath = path_to_theme() . '/images/sections/bildlauf_' . $section .'.png';
   }
   if (file_exists($filepath)) {
     $output = $filepath;
   }
   else {
-    $output = path_to_theme() . '/images/sections/bildlauf_allgemein.jpg';
+    $output = path_to_theme() . '/images/sections/bildlauf_allgemein.png';
   }
   return $output;
 }
-
+   
 //Make a string safe
 function safe_string($string) {
   $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
@@ -239,7 +239,7 @@ function phptemplate_node_submitted($node) {
 
   if ($node->changed && (round(($node->changed - $node->created) / $time_unit) > $threshold)){ // difference between created and changed times > than threshold
 
-    return t('Von !username (@created, letzte &Auml;nderung @changed)', array(
+    return t('Von !username (@created, zuletzt modifiziert am @changed)', array(
       '@changed' => format_date($node->changed, 'short'),
       '!username' => theme('username', $node),
       '@created' => format_date($node->created, 'short'),
@@ -254,22 +254,5 @@ function phptemplate_node_submitted($node) {
   }
 }
 
-function ht16_sb2_preprocess_node(&$variables) {
-  $node = $variables['node'];
 
-  if($node->type == 'ht16news2') {
-    if($node->field_ht16_teaserauto[0]['value'] == 1){
-    $variables['template_file'] = 'node-ht16news2a';
-    }
-  }
-  if($node->type == 'news_abteilung') {
-    if($node->field_other_template[0]['value'] == 1){
-    $variables['template_file'] = 'node-abtnews1';
-    }
-  }
-  if($node->type == 'restauranttexte') {
-    if($node->field_other_template[0]['value'] == 1){
-    $variables['template_file'] = 'node-restauranttexte1';
-    }
-  }
-}
+?>

@@ -60,6 +60,12 @@
           <?php endif; ?>
 	  <div class="cleared"></div>
           <div class="contentLayout">
+            <?php if (!empty($subnavigation)): ?>
+                <div id="subnav">
+      <?php print $subnavigation; ?>
+    </div>
+    <div class="cleared"></div>
+      <?php endif; ?>
 	<?php if ($left): ?>
               <div id="sidebar-left" class="sidebar">
                 <?php echo $left ?>

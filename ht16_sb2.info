@@ -9,6 +9,7 @@ regions[left] = First sidebar
 regions[content] = Content
 regions[right] = Second sidebar
 regions[navigation] = Menu
+regions[subnavigation] = 2nd level navigation
 regions[copyright] = Copyright
 stylesheets[all][] = style.css
 conditional-stylesheets[if lte IE 6][all][] = style.ie6.css
