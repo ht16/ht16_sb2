@@ -1,0 +1,38 @@
+﻿/* $Id: tinymce_userstyle.css $ */
+
+/* begin userstyles */
+
+
+/* green checkmark right of the content */
+
+.check {
+	padding: 2px 30px 2px 0px;
+	background: url('images/checkmark1.png') right center no-repeat;
+	width: 80%;	
+}
+
+/* red attention mark right of the content */
+
+.attention {
+	padding: 2px 30px 2px 0px;
+	background: url('images/redinfo.png') right center no-repeat;
+	width: 80%;	
+}
+
+/* some styling features */
+
+.absatzabstand_klein {
+    margin-top: 0.5em;
+	margin-bottom: 0.75em;
+}
+
+.hervorgehoben {
+	font-weight:bold;
+}
+
+.code {
+	background-color:#eeeeff;
+	border-color:#8080ff;
+	border-style:solid;
+	border-width:1px;
+}

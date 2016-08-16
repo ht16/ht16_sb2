@@ -1,0 +1,22 @@
+; $Id: ht16_sb2.info,v 0.7 2011/05/17 23:40:00 $
+name = HT16 SB2 
+description = Tableless, multi-column, fixed width theme
+screenshot = screenshot.png
+core = 6.x
+engine = phptemplate
+regions[topright] = Right Header
+regions[left] = First sidebar
+regions[content] = Content
+regions[right] = Second sidebar
+regions[navigation] = Menu
+regions[copyright] = Copyright
+stylesheets[all][] = style.css
+conditional-stylesheets[if lte IE 6][all][] = style.ie6.css
+conditional-stylesheets[if lte IE 7][all][] = style.ie7.css
+scripts[] = script.js
+features[] = logo
+features[] = slogan
+features[] = mission
+features[] = comment_user_picture
+features[] = favicon
+
